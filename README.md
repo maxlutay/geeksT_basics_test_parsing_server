@@ -14,7 +14,7 @@ Using Gin framework https://github.com/gin-gonic/gin create a web server with a 
 
 
 Request structure:
-```json
+```go
 type Request struct {
     Site []string // Slice of strings: https://blog.golang.org/go-slices-usage-and-internals
     SearchText string
@@ -33,7 +33,7 @@ Response example:
 ```
 Response structure:
 
-```json
+```go
 type Response struct {
     FoundAtSite string
 }
