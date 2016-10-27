@@ -1,8 +1,6 @@
 Go Lang vacancy test
 This is a task for Go programmer vacancy at Geeks.Team
 
-geeks
-
 As a test for your begginer Go lang skills we ask you to create a simple web-server.
 
 Using Gin framework https://github.com/gin-gonic/gin create a web server with a handler /checkText. Handler will listen for POST request with such JSON:
