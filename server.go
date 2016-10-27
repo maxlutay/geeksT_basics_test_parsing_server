@@ -61,7 +61,7 @@ func checkTextHandler(c *gin.Context){
         }
         
     }else{
-      c.AbortWithError(204,errors.New(">request empty or with empty boxes"))
+      c.AbortWithError(204,errors.New(">request empty or contains empty box(es)"))
     }
     
     
