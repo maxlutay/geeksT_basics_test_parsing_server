@@ -108,8 +108,12 @@ func compileRegExpMatchingTagAndAllInsideIt(tagname string) *regexp.Regexp {
 func searchOnEachSiteOfArr(sites []string, search string) int {
     resrch := regexp.MustCompile(search)
     
+    rehttp := regexp.MustCompile(`^https?://`)
+    
     for k,val := range sites {
-        if( resrch.MatchString( pureHTMLTextContent(getSiteContent(val) ) )   ){
+        var tmp string;
+        if( !rehttp.MatchString(val) ){ tmp = "http://" + val }else{ tmp = val }
+        if( resrch.MatchString( pureHTMLTextContent(getSiteContent(tmp) ) )   ){
           return k  
         }
     }
