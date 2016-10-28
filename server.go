@@ -3,7 +3,7 @@ package main
 import (
     "github.com/gin-gonic/gin"
     "errors"
-    "log"
+    //"log"
     "regexp"
     "net/http"
     "io/ioutil"
@@ -53,7 +53,7 @@ func checkTextHandler(c *gin.Context){
         if i >=0 {
             resjson.FoundAtSite = jsonreq.Site[i]
         
-            log.Print(`>SearchText: "`,jsonreq.SearchText,`"   found on Site [` ,i,`] : `, jsonreq.Site[i] )
+            //log.Print(`>SearchText: "`,jsonreq.SearchText,`"   found on Site [` ,i,`] : `, jsonreq.Site[i] )
         
             c.JSON(200,resjson)
         }else{
