@@ -43,3 +43,18 @@ If text was not found return HTTP Code 204 No Content.
 Your test web-server must be provided at your Github repo. Just send as a link.
 
 If you have any questions: max @ geeks.team.
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+
+So HTTP request should look like this:
+```
+POST /checkText HTTP/1.1
+Host: somehost:8080
+Content-Type: application/json
+
+{
+	"Site":["http://yahoo.com","google.com"],
+	"SearchText":"google"
+}
+```
